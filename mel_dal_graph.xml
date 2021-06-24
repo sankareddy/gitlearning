@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Seed DcFolder="WAN">
+  <Devices />
+  <Wiring Action="Delete" ReuseIPPolicy="Inherit">
+    <Start DeviceType="CoreRouter" DeviceRegex="^dal-96cbe-1a$" Scope="Datacenter" ItfNames="xe-7/1/2:3;xe-9/3/3" />
+    <DevicePattern LinkState="Production" />
+  </Wiring>
+  <Wiring Action="Delete" ReuseIPPolicy="Inherit">
+    <Start DeviceType="CoreRouter" DeviceRegex="^dal-96cbe-1b$" Scope="Datacenter" ItfNames="xe-10/1/0;xe-11/3/3;xe-10/1/0:2" />
+    <DevicePattern LinkState="Production" />
+  </Wiring>
+  <Wiring Action="Delete" ReuseIPPolicy="Inherit">
+    <Start DeviceType="CoreRouter" DeviceRegex="^mel01-96cbe-1a$" Scope="Datacenter" ItfNames="xe-4/0/6;xe-9/1/0" />
+    <DevicePattern LinkState="Production" />
+  </Wiring>
+  <Wiring Action="Delete" ReuseIPPolicy="Inherit">
+    <Start DeviceType="CoreRouter" DeviceRegex="^mel01-96cbe-1b$" Scope="Datacenter" ItfNames="xe-11/2/3;xe-10/1/1" />
+    <DevicePattern LinkState="Production" />
+  </Wiring>
+  <Wiring Action="Add">
+    <Start DeviceType="MseeRouter" DeviceRegex="^dal-06gmr-cis-1$" Scope="Datacenter" ItfNames="TenGigabitEthernet0/0/0;TenGigabitEthernet1/0/0" PortChannel="1" IPv4="10.22.72.44/31" IPv6="2a01:111:2c::1/126" ConnectorType="LR4" />
+    <End DeviceType="CoreRouter" DeviceRegex="^dal-96cbe-1a$" Scope="Datacenter" ItfNames="xe-2/1/0:3;xe-3/1/0:1" PortChannel="8" IPv4="10.22.72.45/31" IPv6="2a01:111:2c::2/126" ConnectorType="LR4" />
+    <DevicePattern LinkCount="2" LinkCountScope="Local" LinkState="Production" />
+  </Wiring>
+  <Wiring Action="Add">
+    <Start DeviceType="MseeRouter" DeviceRegex="^dal-06gmr-cis-1$" Scope="Datacenter" ItfNames="TenGigabitEthernet2/0/0;TenGigabitEthernet2/1/0" PortChannel="2" IPv4="10.22.72.46/31" IPv6="2a01:111:2c::5/126" ConnectorType="LR4" />
+    <End DeviceType="CoreRouter" DeviceRegex="^dal-96cbe-1b$" Scope="Datacenter" ItfNames="xe-10/1/0:2;xe-11/0/5" PortChannel="9" IPv4="10.22.72.47/31" IPv6="2a01:111:2c::6/126" ConnectorType="LR4" />
+    <DevicePattern LinkCount="2" LinkCountScope="Local" LinkState="Production" />
+  </Wiring>
+  <Wiring Action="Add">
+    <Start DeviceType="MseeRouter" DeviceRegex="^mel01-06gmr-cis-2$" Scope="Datacenter" ItfNames="TenGigabitEthernet0/0/0;TenGigabitEthernet1/0/0" PortChannel="1" IPv4="10.235.112.228/31" IPv6="2a01:111:306:1a::9/126" ConnectorType="LR4" />
+    <End DeviceType="CoreRouter" DeviceRegex="^mel01-96cbe-1b$" Scope="Datacenter" ItfNames="xe-8/1/2;xe-8/0/3" PortChannel="8" IPv4="10.235.112.229/31" IPv6="2a01:111:306:1a::a/126" ConnectorType="LR4" />
+    <DevicePattern LinkCount="2" LinkCountScope="Local" LinkState="Production" />
+  </Wiring>
+  <Wiring Action="Add">
+    <Start DeviceType="MseeRouter" DeviceRegex="mel01-06gmr-cis-2$" Scope="Datacenter" ItfNames="TenGigabitEthernet2/0/0;TenGigabitEthernet2/1/0" PortChannel="2" IPv4="10.235.112.230/31" IPv6="2a01:111:306:1a::d/126" ConnectorType="LR4" />
+    <End DeviceType="CoreRouter" DeviceRegex="^mel01-96cbe-1a$" Scope="Datacenter" ItfNames="xe-1/0/2;xe-2/3/1" PortChannel="9" IPv4="10.235.112.231/31" IPv6="2a01:111:306:1a::e/126" ConnectorType="LR4" />
+    <DevicePattern LinkCount="2" LinkCountScope="Local" LinkState="Production" />
+  </Wiring>
+</Seed>
