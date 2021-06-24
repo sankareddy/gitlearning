@@ -1,0 +1,8 @@
+<Seed DcFolder="WAN">
+  <Device Hostname="syd-06gmr-cis-2" Type="MseeRouter" HwSku="Cisco-ASR1006" DeploymentType="ExpressRoute">
+	<ManagementIPInterface Name="ManagementIP" AttachTo="Management0" Prefix="0.0.0.0/0" />
+  </Device>
+  <Device Hostname="hkb-06gmr-cis-4" Type="MseeRouter" HwSku="Cisco-ASR1006" DeploymentType="ExpressRoute">
+	<ManagementIPInterface Name="ManagementIP" AttachTo="Management0" Prefix="0.0.0.0/0" />
+  </Device>
+</Seed>
